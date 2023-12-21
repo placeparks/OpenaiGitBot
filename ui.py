@@ -98,3 +98,22 @@ def main():
 
 if __name__ == "__main__":
     main()
+# Add custom CSS for footer
+footer_style = """
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+padding: 10px;
+background-color: rgba(255, 255, 255, 0.5);  /* Semi-transparent light background */
+color: #000;                                  /* Dark text for visibility */
+border-top: 1px solid #000;                   /* Border to distinguish the footer */
+z-index: 1000;                                /* Ensures it stays on top of other elements */
+"""
+
+# Footer
+st.markdown(
+    '<div style="{}">Developed by Mirac.eth<br>Contact: mirac.eth@ethereum.email</div>'.format(footer_style),
+    unsafe_allow_html=True
+)
